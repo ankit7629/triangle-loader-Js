@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  height: 100vh;
+}
+
+.loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.triangle1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 0;
+  width: 0;
+  border: 80px solid transparent;
+  border-bottom: 80px solid rgb(219, 47, 47);
+  animation: triangle1 2s linear infinite 0.5s;
+}
+
+.triangle2 {
+  position: absolute;
+  left: -60px;
+  top: 0px;
+  height: 0;
+  width: 0;
+  border: 80px solid transparent;
+  border-bottom: 80px solid rgb(216, 36, 36);
+  animation: triangle2 2s linear infinite 0.5s;
+}
+
+@keyframes triangle1 {
+
+  0%,33% {
+    transform: rotate(0deg);
+  }
+  33%,66% {
+    transform: rotate(90deg);
+  }
+  66%,100% {
+    transform: rotate(180deg);
+  }
+
+}
+
+@keyframes triangle2 {
+
+  0%,25% {
+    transform: rotate(90deg);
+  }
+  25%,50% {
+    transform: rotate(250deg);
+  }
+  66%,100% {
+    transform: rotate(360deg);
+  }
+
+}
